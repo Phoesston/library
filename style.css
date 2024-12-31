@@ -1,0 +1,130 @@
+:root {
+    --teal-600: #16a34a;
+    --main-color: rgba(0, 0, 0, 0.89);
+    --text-color: #fff;
+    --background-color: #1f2937;
+    --border-color: #374151;
+    --input-bg: #f3f4f6;
+    --hover-color: #2563eb;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.add-book button {
+    border-radius: 30px;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 1em;
+    width: 10em;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.add-book button:hover {
+    background: var(--teal-600);
+}
+
+.form-dialog {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--background-color);
+    max-width: 400px;
+    width: 90%;
+    color: var(--text-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.dialog-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.dialog-close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dialog-close-button:hover {
+    color: var(--hover-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--main-color);
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+#read-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.submit-button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--teal-600);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button button:hover {
+    background-color: var(--hover-color);
+}
+
+
+
+
