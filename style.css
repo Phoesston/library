@@ -1,34 +1,122 @@
 :root {
     --teal-600: #16a34a;
+    --teal-700: #15803d;
     --main-color: rgba(0, 0, 0, 0.89);
-    --text-color: #fff;
+    --text-color: #ffffff;
     --background-color: #1f2937;
     --border-color: #374151;
     --input-bg: #f3f4f6;
     --hover-color: #2563eb;
+    --header-color: #e9d173;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --gap-size: 20px;
+    --button-padding: 0.8em 1.5em;
+    --font-main: 'Arial', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-large: 1.5rem;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
+    padding: 2rem;
+    background-color: var(--header-color);
+    color: var(--main-color);
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .add-book button {
-    border-radius: 30px;
+    border-radius: 25px;
     background: var(--main-color);
     color: var(--text-color);
-    padding: 1em;
-    width: 10em;
-    font-size: 30px;
+    padding: var(--button-padding);
+    font-size: var(--font-size-large);
     cursor: pointer;
     border: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .add-book button:hover {
     background: var(--teal-600);
+    transform: scale(1.05);
+}
+
+#books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-size);
+    padding: 2rem;
+    background-color: var(--background-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    width: 250px;
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 10px var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-size);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--card-shadow);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.card p {
+    margin: 0.5rem 0; 
+    font-size: 1.2rem;
+    color: var(--main-color); 
+    line-height: 1.5; 
+    text-align: center; 
+}
+
+.card button {
+    padding: 0.5em 1em;
+    font-size: var(--font-size-base);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
 .form-dialog {
@@ -53,9 +141,8 @@
 }
 
 .dialog-header h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-large);
     margin: 0;
-    color: var(--text-color);
 }
 
 .dialog-close-button {
@@ -74,7 +161,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--gap-size);
 }
 
 form div {
@@ -85,12 +172,12 @@ form div {
 label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: var(--text-color);
 }
 
-input[type="text"] {
-    padding: 10px;
-    font-size: 1rem;
+input[type="text"],
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: var(--font-size-base);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     background: var(--input-bg);
@@ -102,28 +189,28 @@ input[type="checkbox"] {
     margin-right: 10px;
 }
 
-
 #read-form {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-
 .submit-button button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: var(--button-padding);
+    font-size: var(--font-size-base);
     color: var(--text-color);
-    background-color: var(--teal-600);
+    background-color: var(--teal-700);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .submit-button button:hover {
     background-color: var(--hover-color);
+    transform: scale(1.05);
 }
+
 
 
 
